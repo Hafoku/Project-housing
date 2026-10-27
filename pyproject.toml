@@ -1,0 +1,41 @@
+[project]
+name = "housing-platform"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "celery[redis]>=5.6.3",
+    "django>=5.2.8,<5.3",
+    "django-allauth>=65.21.0",
+    "django-celery-beat>=2.9.0",
+    "django-cors-headers>=4.9.0",
+    "django-environ>=0.14.0",
+    "django-filter>=26.2",
+    "django-fsm-2>=4.2.4",
+    "django-modeltranslation>=0.20.6",
+    "django-simple-history>=3.13.0",
+    "djangorestframework>=3.18.3",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.30.0",
+    "gunicorn>=26.2.0 ; sys_platform != 'win32'",
+    "pillow>=13.0.0",
+    "psycopg[binary]>=3.3.6",
+    "pywebpush>=2.5.0",
+    "sentry-sdk>=2.73.0",
+    "stripe>=16.0.1",
+    "whitenoise>=6.12.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-browser-reload>=1.21.0",
+    "django-debug-toolbar>=8.0.0",
+    "django-extensions>=4.1",
+    "factory-boy>=3.3.3",
+    "faker>=40.43.0",
+    "ipython>=9.17.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "pytest-django>=4.14.0",
+    "ruff>=0.17.3",
+]
