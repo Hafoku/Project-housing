@@ -17,7 +17,7 @@ import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.environ.get("DJANGO_DEBUG", 0)))
+DEBUG = os.environ.get('DJANGO_DEBUG', 1)
 
 ALLOWED_HOSTS = []
 
@@ -32,8 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    *APPS
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
